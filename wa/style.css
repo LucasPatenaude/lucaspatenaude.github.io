@@ -1,0 +1,98 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+header 
+{
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav 
+{
+    width: 175px;
+    position: fixed;
+    background-color: #f8f8f8;
+    text-align: center;
+    height: auto;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Adds round corners */
+    top: 15%; /* Sets distance from the top edge */
+    left: 10px; /* Sets distance from the right edge */
+}
+
+nav h2 
+{
+    margin-top: 0;
+}
+
+nav ul
+{
+    list-style: none;
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    text-align: center; /* Centers the text */
+    line-height: 20px;
+}
+
+nav li
+{
+    margin-bottom: 15px;
+    display: inline-block;
+    white-space: wrap;
+}
+  
+section
+{
+    text-align: center;
+    width: 100%;
+    max-width: 60%;
+    margin: auto;
+}
+
+section img
+{
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+section p
+{
+    overflow-wrap: break-word; /* Modern equivalent */
+}
+
+section ul
+{
+    list-style: none;
+    padding: 0px; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    text-align: center; /* Centers the text */
+    line-height: 20px;
+    margin-bottom: 10%;
+}
+
+footer 
+{
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p 
+{
+    margin: 0;
+}
+  
