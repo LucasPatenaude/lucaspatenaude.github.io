@@ -17,8 +17,7 @@ header
     color: #FFD700;
     text-shadow: 3px 3px 2px #BF0A30;
     text-align: center;
-    position: relative;
-    
+    position: relative;    
 }
 
 header h1
@@ -31,12 +30,14 @@ header img
     height: 75%;
     position: absolute;
     left: 25px;
-    top: 50s%; /* Adjust as needed to vertically center the image */
+    top: 50%; /* Adjust as needed to vertically center the image */
 }
 
 nav 
 {
-    top: 100px;
+    top: 100px; /* Sets distance from top edge*/
+    left: 10px; /* Sets distance from the right edge */
+
     width: 200px;
     position: fixed;
     background-color: #f8f8f8;
@@ -47,7 +48,6 @@ nav
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px; /* Adds round corners */
-    left: 10px; /* Sets distance from the right edge */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
