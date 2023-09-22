@@ -1,0 +1,73 @@
+/* General styles - put these straight into your stylesheet */
+
+body 
+{
+  margin: 100px;
+}
+
+html 
+{
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  color: white;
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+h2
+{
+  font-size: 2em;
+  line-height: 1.5em;
+  color: black;
+}
+
+h2, p
+{
+  margin: 0;
+}
+
+.card
+{
+  font-size: 10px;
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: maroon;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+.card footer, .card header
+{
+  height: 3em;
+  padding: 10px;
+}
+
+.card header
+{
+  background-color: red;
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.card article
+{
+  height: 12em;
+}
+
+.card article img
+{
+  max-height: 100%;
+  float: right;
+}
+
+.card footer
+{
+
+  background-color: red;
+  border-radius: 0 0 1.5em 1.5em;
+  font-size: 1.5em;
+  line-height: 30px;
+}
+
+
+
+
