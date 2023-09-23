@@ -2,13 +2,13 @@
 
 body 
 {
-  margin: 100px;
+  margin: 2em;
 }
 
 html 
 {
   font-family: 'Helvetica neue', Arial, 'sans serif';
-  color: white;
+  color: #EAEAEA;
   font-size: 10px;
   background-color: #ccc;
 }
@@ -17,7 +17,6 @@ h2
 {
   font-size: 2em;
   line-height: 1.5em;
-  color: black;
 }
 
 h2, p
@@ -31,7 +30,7 @@ h2, p
   width: 35em;
   height: 22em;
   margin: 5em auto;
-  background-color: maroon;
+  background-color: #BF0001;
   border: 0.2em solid black;
   border-radius: 1.5em;
 }
@@ -39,7 +38,8 @@ h2, p
 .card footer, .card header
 {
   height: 3em;
-  padding: 10px;
+  padding: 1em;
+  color: black;
 }
 
 .card header
@@ -50,7 +50,12 @@ h2, p
 
 .card article
 {
-  height: 12em;
+  height: 12em; 
+}
+
+.card article p
+{
+  padding: 1em;
 }
 
 .card article img
@@ -61,11 +66,15 @@ h2, p
 
 .card footer
 {
-
   background-color: red;
   border-radius: 0 0 1.5em 1.5em;
+}
+
+.card footer p
+{
+  line-height: 1.5em;
   font-size: 1.5em;
-  line-height: 30px;
+  text-align: center;
 }
 
 
