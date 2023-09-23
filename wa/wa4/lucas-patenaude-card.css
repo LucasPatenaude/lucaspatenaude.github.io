@@ -7,7 +7,6 @@ body
 
 html 
 {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #EAEAEA;
   font-size: 10px;
   background-color: #ccc;
@@ -26,6 +25,7 @@ h2, p
 
 .lucas-card
 {
+  font-family: 'Times New Roman', Times, serif, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 10px;
   width: 35em;
   height: 23em;
