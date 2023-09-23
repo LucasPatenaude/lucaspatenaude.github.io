@@ -1,0 +1,82 @@
+/* General styles - put these straight into your stylesheet */
+
+body 
+{
+  margin: 2em;
+}
+
+html 
+{
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  color: #EAEAEA;
+  font-size: 10px;
+  background-color: #ccc;
+}
+
+h2
+{
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+h2, p
+{
+  margin: 0;
+}
+
+.chris-card
+{
+  font-size: 10px;
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: #BF0001;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+.chris-card footer, .chris-card header
+{
+  height: 3em;
+  padding: 1em;
+  color: black;
+}
+
+.chris-card header
+{
+  background-color: red;
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.chris-card article
+{
+  height: 12em; 
+}
+
+.chris-card article p
+{
+  padding: 1em;
+}
+
+.chris-card article img
+{
+  max-height: 100%;
+  float: right;
+}
+
+.chris-card footer
+{
+  background-color: red;
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.chris-card footer p
+{
+  line-height: 1.5em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
+
+
