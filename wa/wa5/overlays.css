@@ -1,0 +1,51 @@
+/* overlays.css */
+
+/* Style the image */
+.game
+{
+    position: relative; /* Set position to relative */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Set z-index to bring it above overlay elements */
+}
+
+.game img
+{
+    width: 90vw;
+    min-height: 90vh;
+    height: auto;
+}
+
+/* Style the scorebug */
+.scorebug, .network-logo 
+{
+    position: absolute; /* Set position to absolute */
+    z-index: 2; /* Set z-index to appear above the image */   
+}
+
+/* Position the scorebug */
+.scorebug 
+{
+    top: 80vh;
+    left: 10vw;    
+}
+
+.scorebug img
+{
+    width: 30vw;
+}
+
+/* Position the network logo */
+.network-logo 
+{
+    top: 5vh; /* Adjust top position as needed */
+    left: 90vw;
+    opacity: 75%;
+}
+
+.network-logo img
+{
+    width: 3vw;
+}
