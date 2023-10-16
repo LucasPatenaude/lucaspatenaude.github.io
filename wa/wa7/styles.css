@@ -1,0 +1,109 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font: 1.0em / 1.2 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: grid;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 980px;
+
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: row; /* Set flex direction to row for two columns */
+
+}
+
+p {
+line-height: normal;
+}
+
+article, aside {
+  flex: 60/40; /* Make both the article and aside take up equal space */
+  margin: 0 10px; /* Add some spacing between the columns */
+}
+
+
+nav {
+  background-color: #000;
+  padding: .5em;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 100%; /* Set the width to 100% */
+  z-index: 1000; /* Add a z-index to ensure it's on top */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto new lines */
+}
+
+.photos li {
+    flex: 0  48%; /* Flex properties to control item width and flexibility */
+    margin: 1px; /* Add some spacing between items */
+}
+
+.feature {
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 750px) {
+  .logo {
+      font-size: 150%; /* Adjust font size for smaller screens */
+      padding: 20px 10px; /* Adjust padding for smaller screens */
+      margin-top: 120px;
+    }
+
+  .grid {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack navigation items vertically */
+      text-align: center; /* Center align the items */;
+  }
+
+  nav a {
+      margin: 20px 0; /* Adjust padding for smaller screens */
+  }
+
+  .main-content {
+      margin-top: 20px; /* Adjust margin for smaller screens */
+  }
+}
