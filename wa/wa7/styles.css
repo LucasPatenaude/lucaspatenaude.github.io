@@ -14,7 +14,7 @@ img {
 
 .logo {
   font-size: 200%;
-  padding: 50px;
+  padding-top: 60px;
   margin: 0 auto;
   max-width: 980px;
 
@@ -34,8 +34,17 @@ line-height: normal;
 }
 
 article, aside {
-  flex: 60/40; /* Make both the article and aside take up equal space */
-  margin: 0 10px; /* Add some spacing between the columns */
+  margin: 10px; /* Add some spacing between the columns */
+}
+
+article {
+  flex: 0 0 70%; /* 70% width, don't grow or shrink */
+}
+
+aside {
+
+  flex: 0 0 30%; /* 30% width, don't grow or shrink */
+
 }
 
 
@@ -46,7 +55,7 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 100%; /* Set the width to 100% */
-  z-index: 1000; /* Add a z-index to ensure it's on top */
+  z-index: 10; /* Add a z-index to ensure it's on top */
 }
 
 nav ul {
@@ -72,7 +81,7 @@ nav a {
 }
 
 .photos li {
-    flex: 0  48%; /* Flex properties to control item width and flexibility */
+    flex: 0 49%; /* Flex properties to control item width and flexibility */
     margin: 1px; /* Add some spacing between items */
 }
 
@@ -100,7 +109,7 @@ nav a {
   }
 
   nav a {
-      margin: 20px 0; /* Adjust padding for smaller screens */
+    padding: 5em 1em;
   }
 
   .main-content {
