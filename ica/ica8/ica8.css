@@ -1,0 +1,32 @@
+body {
+    background-color: khaki;
+}
+
+#box1 {
+    width: 25vw;
+    height: 20vh;
+    padding-left: 10px;
+    background-color: indianred;
+    transition: background-color 1s; /* Create transition for Box1 <-- Set to 1 second */
+}
+
+#box1:hover {
+    background-color: purple; /* Set transition color to purple */
+}
+
+#box2 {
+    width: 25vw;
+    height: 20vh;
+    position: relative;
+    background-color: orangered;
+    animation: box2move 5s infinite alternate; /* Create animation for Box2. Set to run infinitely and alternate start point for each iteration */
+}
+
+@keyframes box2move {
+    0% { 
+        left: 10px; /* Start animation at 10px from left */
+    }
+    100% {
+        left: 75%; /* Move 75% to the right */
+    }
+}

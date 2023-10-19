@@ -26,7 +26,6 @@ img {
   max-width: 90%;
   display: flex;
   flex-direction: row; /* Set flex direction to row for two columns */
-
 }
 
 p {
@@ -88,7 +87,7 @@ nav a {
 .feature {
     width: 200px;
     float: left;
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
 /* Media query for smaller screens */
