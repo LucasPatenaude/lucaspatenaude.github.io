@@ -1,36 +1,61 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: #f5deb3; /* Changed background color to wheat */
+    font-family: 'Courier New', Courier, monospace;
 }
-nav{
-    height: 50vh;
-    display:flex;
+
+nav {
+    width: 100%; /* Set width to 100% */
+    height: 50px; /* Changed height to fixed value */
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height:20px;
-    background-color: blueviolet;
+    background-color: #8a2be2; /* Changed nav bar color to blueviolet */
 }
-nav a{
-    width:10vw;
+
+nav a {
+    width: auto; /* Removed fixed width */
     text-align: center;
     text-decoration: none;
-    color:black;
+    color: #fff; /* Changed text color to white */
+    padding: 10px 20px; /* Added padding */
+    transition: background-color 0.3s; /* Added transition effect */
 }
 
-
-img{
-    width:30vw;
-    height: 30vh;
+nav a:hover {
+    background-color: green; /* Added hover effect */
+    transform: scale(1.2);
 }
 
-#red-ball{
-    background-color: crimson;
-    width: 20px;
-    height:20px;
+img {
+    padding-top: 50px;
+    width: 50%; /* Changed image width */
+    max-height: 50vh; /* Added max height */
+}
+
+#red-ball {
+    background-color: #ff4500; /* Changed ball color to orangered */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     position: absolute;
-    left:5vw;
-    top:0;
+    left: 5vw;
+    top: 50%;
+    transition: transform 0.3s; /* Added transition effect */
+    animation: moveTheBall 1s infinite alternate;
+}
+
+#red-ball:hover {
+    transform: scale(1.2); /* Added hover effect */
+}
+
+@keyframes moveTheBall {
+    0% { 
+        left: 10px; /* Start animation at 10px from left */
+    }
+    100% {
+        left: 99%; /* Move 75% to the right */
+    }
 }
