@@ -51,8 +51,8 @@ img {
     transform: scale(1.2); /* Added hover effect */
 }
 
-@keyframes moveTheBall {
-    0% { 
+@keyframes moveTheBall { /* Animate moving ball side to side */
+    0% {
         left: 10px; /* Start animation at 10px from left */
     }
     100% {
