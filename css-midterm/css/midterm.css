@@ -1,9 +1,12 @@
 body {
-    background-color: #fff;
     color: #333;
     margin: 0;
     font: 1.0em / 1.2 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
+    align-items: center;
+    background-image: url('../img/Sky.png');
+    background-size: auto; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
 }
 
 p {
@@ -12,22 +15,60 @@ p {
 
 .grid {
     margin: 0 auto;
-    padding: 0 20px;
-    max-width: 95%;
+    padding: 0px;
+    max-width: 100%;
     display: flex;
-    flex-direction: row; /* Set flex direction to row for two columns */
+    flex-direction: column; /* Set flex direction to column for two sections */
 }
 
-article, schedule {
-    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
-    margin-top: 20px;
-    
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Add this line */
+    width: 100%; /* 10% width for header */
+    height: 75px;
+    background-image: repeating-linear-gradient(#002868, #002868 25px, #fff 25px, #fff 50px);
+    background-color: #333;
+    color: #FFD700;
+    text-shadow: 3px 3px 2px #BF0A30;
+    text-align: center; 
+}
+
+header img {
+    height: 75%; /* Adjust the height as needed */
+    position: absolute;
+    left: 25px;
+}
+
+content {
+    display: flex;
+    width: 100%; /* 90% width for content */
+}
+
+content, header {
+    margin-top: 100px;
+    flex-direction: row;
+    z-index: 1;
+}
+
+header, nav, schedule {
+    display: flex;
+    margin-top: 10px; 
+    z-index: 2; 
+}
+
+nav, schedule {
+    margin: 20px;
 }
 
 about, calendar, card {
+    background-color: white;
     border: 1px solid rgb(177, 177, 177);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
 about, calendar
@@ -36,24 +77,25 @@ about, calendar
     padding: 10px;
 }
 
-article {
+nav {
     left: 0%; /* Position at the left */
     width: 30%; /* Set the width */
     height: fit-content; /* Take full height of the viewport */
-    padding: 20px;
     margin-bottom: 20px;
     text-align: center;
+    flex: 35%;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    list-style: none;   
 }
 
-article p {
+nav h3 {
+    text-decoration: underline;
+}
+
+nav p {
     margin-left: 0;
     padding: 10px;
-}
-
-article li {
-    list-style: none;
 }
 
 calendar {
@@ -61,7 +103,7 @@ calendar {
 }
 
 schedule {
-    flex: 0 0 70%; /* 30% width, don't grow or shrink */
+    flex: 0 0 65%; /* 30% width, don't grow or shrink */
     display: flex;
     flex-wrap: wrap;
 }
@@ -70,11 +112,10 @@ card {
     
     padding: 30px;
     margin-bottom: 10px;
-    margin-left: 2%;
-    transition: background-color 0.3s; /* Add a transition for the background color */
+     /* Add a transition for the background color */
 }
 
-card:hover {
+about:hover, calendar:hover, card:hover {
     background-color: #dcdcdc; /* Change the background color on hover */
     transform: scale(1.01)
 }
