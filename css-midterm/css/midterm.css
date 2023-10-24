@@ -36,21 +36,21 @@ header img {
     left: 25px;
 }
 
-header, nav, content, schedule {
+header, .sidebar, .content, .schedule {
     display: flex;
     
 }
 
-content {
+.content {
     margin-top: 80px;
 }
 
-nav, schedule {
+.sidebar, .schedule {
     margin: 20px;
     z-index: 1; 
 }
 
-about, calendar, card {
+.about, .calendar, .card {
     background-color: white;
     border: 1px solid rgb(177, 177, 177);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,13 +58,13 @@ about, calendar, card {
     transition: background-color 0.3s;
 }
 
-about, calendar
+.about, .calendar
 {
     margin-bottom: 10px;
     padding: 10px;
 }
 
-nav {
+.sidebar {
     left: 0%; /* Position at the left */
     width: 30%; /* Set the width */
     height: fit-content; /* Take full height of the viewport */
@@ -72,37 +72,45 @@ nav {
     text-align: center;
     flex: 35%;
     display: flex;
-    flex-direction: column;
-    list-style: none;   
+    flex-direction: column; 
 }
 
-nav h3 {
+.sidebar h3 {
     text-decoration: underline;
 }
 
-nav p {
+.sidebar p {
     margin-left: 0;
     padding: 10px;
 }
 
-calendar {
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding-bottom: 30px;
 }
 
-schedule {
+.calendar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule {
     flex: 0 0 65%; /* 30% width, don't grow or shrink */
     display: flex;
     flex-wrap: wrap;
 }
 
-card {
+.card {
     
     padding: 30px;
     margin-bottom: 10px;
      /* Add a transition for the background color */
 }
 
-about:hover, calendar:hover, card:hover {
+.about:hover, .calendar:hover, .about:hover {
     background-color: #dcdcdc; /* Change the background color on hover */
     transform: scale(1.01)
 }
@@ -118,12 +126,12 @@ about:hover, calendar:hover, card:hover {
         flex-wrap: wrap;
     }
 
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
+    .sidebar ul {
+        flex-direction: column; /* Stack .sidebarigation items vertically */
         text-align: center; /* Center align the items */;
     }
 
-    nav a {
+    .sidebar a {
         padding: 5em 1em;
     }
 
