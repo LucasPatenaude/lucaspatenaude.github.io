@@ -110,32 +110,42 @@ header, .sidebar, .content, .schedule {
      /* Add a transition for the background color */
 }
 
-.about:hover, .calendar:hover, .about:hover {
+.about:hover, .calendar:hover, .card:hover {
     background-color: #dcdcdc; /* Change the background color on hover */
     transform: scale(1.01)
 }
 
 @media screen and (max-width: 750px) {
-    .logo {
-        font-size: 150%; /* Adjust font size for smaller screens */
-        padding: 20px 10px; /* Adjust padding for smaller screens */
-        margin-top: 120px;
+
+    p {
+        margin: 0px;
     }
 
-    .grid {
-        flex-wrap: wrap;
+    header, .content, .sidebar, .schedule {
+        flex-direction: column;
     }
 
-    .sidebar ul {
-        flex-direction: column; /* Stack .sidebarigation items vertically */
-        text-align: center; /* Center align the items */;
+    header img {
+        display: none;
     }
 
-    .sidebar a {
-        padding: 5em 1em;
+    .calendar li, .calendar h3, .calendar h4, .calendar a {
+        text-align: center; /* Center align the elements in the calendar */
     }
 
-    .main-content {
-        margin-top: 20px; /* Adjust margin for smaller screens */
+    header, .content, .sidebar, .schedule, .card, .about, .calendar {
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .content, .sidebar, .schedule, .card, .about, .calendar {
+        width: 90%;
+        
+    }
+
+    /* If necessary, override specific widths for certain elements */
+    /* For example, if you want to set a specific width for cards */
+    .card {
+        width: 90%; /* Adjust as needed */
     }
 }
