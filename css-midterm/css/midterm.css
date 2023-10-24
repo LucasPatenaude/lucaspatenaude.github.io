@@ -13,6 +13,11 @@ p {
     margin-left: 20px;
 }
 
+header a {
+    text-decoration: none;
+    color: #FFD700;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -26,7 +31,7 @@ header {
     color: #FFD700;
     text-shadow: 3px 3px 2px #BF0A30;
     text-align: center;
-    margin-top: 10px; 
+    margin-top: 0px; 
     z-index: 2; 
 }
 
@@ -118,10 +123,10 @@ header, .sidebar, .content, .schedule {
 @media screen and (max-width: 750px) {
 
     p {
-        margin: 0px;
+        margin: 0;
     }
 
-    header, .content, .sidebar, .schedule {
+    .content, .schedule {
         flex-direction: column;
     }
 
@@ -133,14 +138,13 @@ header, .sidebar, .content, .schedule {
         text-align: center; /* Center align the elements in the calendar */
     }
 
-    header, .content, .sidebar, .schedule, .card, .about, .calendar {
+    .content, .sidebar, .schedule, .card, .about, .calendar {
         align-items: center;
         box-sizing: border-box;
     }
     
     .content, .sidebar, .schedule, .card, .about, .calendar {
         width: 90%;
-        
     }
 
     /* If necessary, override specific widths for certain elements */
