@@ -21,7 +21,6 @@ header a {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     position: fixed; /* Add this line */
     width: 100%; /* 10% width for header */
@@ -47,11 +46,11 @@ header, .sidebar, .content, .schedule {
 }
 
 .content {
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .sidebar, .schedule {
-    margin: 20px;
+    margin-left: 20px;
     z-index: 1; 
 }
 
@@ -104,6 +103,7 @@ header, .sidebar, .content, .schedule {
 
 .schedule {
     flex: 0 0 65%; /* 30% width, don't grow or shrink */
+    margin-right: 20px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -130,26 +130,18 @@ header, .sidebar, .content, .schedule {
         flex-direction: column;
     }
 
+    .sidebar {
+        margin-bottom: 0px;
+    }
+
     header img {
         display: none;
     }
-
-    .calendar li, .calendar h3, .calendar h4, .calendar a {
-        text-align: center; /* Center align the elements in the calendar */
-    }
-
-    .content, .sidebar, .schedule, .card, .about, .calendar {
-        align-items: center;
-        box-sizing: border-box;
-    }
     
     .content, .sidebar, .schedule, .card, .about, .calendar {
+        box-sizing: border-box;
+        align-items: center;
+        margin-left: 3%;
         width: 90%;
-    }
-
-    /* If necessary, override specific widths for certain elements */
-    /* For example, if you want to set a specific width for cards */
-    .card {
-        width: 90%; /* Adjust as needed */
     }
 }
