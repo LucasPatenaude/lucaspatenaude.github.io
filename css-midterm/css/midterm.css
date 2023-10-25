@@ -13,6 +13,13 @@ p {
     margin-left: 20px;
 }
 
+h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(247, 199, 70);
+    text-decoration: solid;
+    text-shadow: -1px -1px 0 #002868, 1px -1px 0 #002868, -1px 1px 0 #002868, 1px 1px 0 #002868;
+}
+
 header a {
     text-decoration: none;
     color: #FFD700;
@@ -49,15 +56,10 @@ header, .sidebar, .content, .schedule {
     margin-top: 90px;
 }
 
-.sidebar, .schedule {
-    margin-left: 20px;
-    z-index: 1; 
-}
-
 .about, .calendar, .card {
-    background-color: white;
+    background-color: rgb(255, 254, 254);
     border: 1px solid rgb(177, 177, 177);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     transition: background-color 0.3s;
 }
@@ -66,6 +68,11 @@ header, .sidebar, .content, .schedule {
 {
     margin-bottom: 10px;
     padding: 10px;
+}
+
+.sidebar, .schedule {
+    margin-left: 20px;
+    z-index: 1; 
 }
 
 .sidebar {
@@ -111,6 +118,13 @@ header, .sidebar, .content, .schedule {
     padding: 30px;
     margin-bottom: 10px;
      /* Add a transition for the background color */
+}
+
+.card h3
+{
+    font-size: 22px;
+    color: white;
+    text-shadow: -1px -1px 0 #002868, 1px -1px 0 #002868, -1px 1px 0 #002868, 1px 1px 0 #002868;
 }
 
 .about:hover, .calendar:hover, .card:hover {
