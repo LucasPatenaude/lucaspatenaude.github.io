@@ -1,5 +1,5 @@
 body {
-    font-family: helvetica, sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +11,13 @@ body {
 
   h1 {
     color: white;
-    font-size: 60px;
-    text-shadow: -1px -1px 75px black, -1px -1px 0 #B6D0E2, 1px -1px 0 #B6D0E2, -1px 1px 0 #B6D0E2, 1px 1px 0 #B6D0E2;
+    height: 50px;
+
     text-align: center;
+    font-size: 70px;
+
+    text-shadow: 0px 2px 10px rgb(117, 120, 127), -1px -1px 0 #B6D0E2, 1px -1px 0 #B6D0E2, -1px 1px 0 #B6D0E2, 1px 1px 0 #B6D0E2;
+    
   }
 
   label {
@@ -23,12 +27,17 @@ body {
   }
 
   button {
-    background-color: white;
-    padding: 5px;
+    background-color: rgb(97, 126, 146);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+    color: white;
+
+    padding: 7px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    border: 1px solid #b7c3cb;
     border-radius: 5px;
-    border: gray;
-    border-width: 1px;
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   }
 
   div {
@@ -36,10 +45,14 @@ body {
   }
 
   input[type="text"] {
-    padding: 5px;
     width: 250px;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+    padding: 10px;
     text-align: center;
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
+    
+    border: 1px solid #b7c3cb;
+    border-radius: 6px;
   }
 
   p {
@@ -52,19 +65,22 @@ body {
   .story {
     width: 700px;
     background-color: rgb(255, 254, 254);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+
+    padding: 20px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+
     border: 1px solid rgb(177, 177, 177);
-    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+
     transition: background-color 0.3s;
-    padding: 25px;
-    padding-bottom: 30px;
-    padding-top: 30px;
   }
   
   button:hover{
     background-color: #dcdcdc; /* Change the background color on hover */
     transform: scale(1.02)
-}
+  }
 
 @media screen and (max-width: 750px) {
 

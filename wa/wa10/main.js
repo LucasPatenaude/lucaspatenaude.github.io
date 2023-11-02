@@ -17,7 +17,7 @@ const insertY = ['I\'m going to the bathroom', 'I\'m going to church', 'I\'m goi
 const insertZ = ['Wow! What a great idea', 'That\'s the worst thing I\'ve ever heard', '[SCREAMING NOISES]', "No, This is Patrick"];
 
 // Add an event listener to the 'randomize' button
-randomize.addEventListener('click', result);
+randomize.addEventListener('click', result); // Run function 'result' through click of element designated in HTML as "randomize" <-- In this case the button
 
 // Function to generate and display the story
 function result() 
