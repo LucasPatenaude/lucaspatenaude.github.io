@@ -10,12 +10,16 @@ body {
     background-repeat: repeat;
   }
 
-  h1 label {
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  h1 {
+    color: white;
+    font-size: 60px;
+    text-shadow: -1px -1px 75px black, -1px -1px 0 rgb(184, 141, 32), 1px -1px 0 rgb(184, 141, 32), -1px 1px 0 rgb(184, 141, 32), 1px 1px 0 rgb(184, 141, 32);
   }
 
   label {
     font-weight: bold;
+    color: white;
+    text-shadow: -1px -1px 75px black, -1px -1px 0 rgb(184, 141, 32), 1px -1px 0 rgb(184, 141, 32), -1px 1px 0 rgb(184, 141, 32), 1px 1px 0 rgb(184, 141, 32);
   }
 
   div {
@@ -26,6 +30,7 @@ body {
     padding: 5px;
     width: 250px;
     text-align: center;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   }
 
   p {
