@@ -11,9 +11,8 @@ function randomValueFromArray(array)
 }
 
 // Define the story template and arrays for placeholders
-const storyText = 'Once upon a time :insertw: was really bored. Suddenly :insertw: had an idea "I should go to :insertx:, that would be great!" :insertw: called up all its friend, Nosferatu and told them, ":inserty:." Nosferatu replied, ":insertz:."' ;
-const insertW = ['Smaug', 'John Denver', 'Chris Cringle', 'Bono', 'Ozzy Osbourne'];
-const insertX = ['the bathroom', 'church', 'Denver', 'Death Row' ]
+const storyText = 'Once upon a time :insertx: was really bored. Suddenly :insertx: had an idea "I should call up my friend, Nosferatu, that would be great!" :insertx: called up all its friend, Nosferatu and told them, ":inserty:." Nosferatu replied, ":insertz:."' ;
+const insertX = ['Smaug', 'John Denver', 'Chris Cringle', 'Bono', 'Ozzy Osbourne'];
 const insertY = ['I\'m going to the bathroom', 'I\'m going to church', 'I\'m going to Denver', "I\'m visiting our local Death Row", "I\'m going to Imaginationland", "Is this the Krusty Krab?", "I weigh 450 pounds"];
 const insertZ = ['Wow! What a great idea', 'That\'s the worst thing I\'ve ever heard', '[SCREAMING NOISES]', "No, This is Patrick"];
 
@@ -26,13 +25,11 @@ function result()
     let newStory = storyText; // Initialize newStory with the original story template
 
     // Get random items from arrays for placeholders
-    const wItem = randomValueFromArray(insertW);
     const xItem = randomValueFromArray(insertX);
     const yItem = randomValueFromArray(insertY);
     const zItem = randomValueFromArray(insertZ);
 
     // Replace placeholders in the story template with randomly selected items
-    newStory = newStory.replaceAll(':insertw:', wItem);
     newStory = newStory.replaceAll(':insertx:', xItem);
     newStory = newStory.replaceAll(':inserty:', yItem);
     newStory = newStory.replaceAll(':insertz:', zItem);
