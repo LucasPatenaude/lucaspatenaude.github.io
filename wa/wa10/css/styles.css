@@ -14,6 +14,7 @@ body {
     color: white;
     font-size: 60px;
     text-shadow: -1px -1px 75px black, -1px -1px 0 rgb(184, 141, 32), 1px -1px 0 rgb(184, 141, 32), -1px 1px 0 rgb(184, 141, 32), 1px 1px 0 rgb(184, 141, 32);
+    text-align: center;
   }
 
   label {
@@ -41,7 +42,7 @@ body {
   }
 
   .story {
-    width: 50%;
+    width: 700px;
     background-color: rgb(255, 254, 254);
     border: 1px solid rgb(177, 177, 177);
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
@@ -55,4 +56,16 @@ body {
   .story:hover {
     background-color: #dcdcdc; /* Change the background color on hover */
     transform: scale(1.02)
+}
+
+@media screen and (max-width: 750px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+.story {
+  width: 85%;
+}
+  
 }
