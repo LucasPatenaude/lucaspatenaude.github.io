@@ -15,7 +15,11 @@ function random(number)
     return Math.floor(Math.random() * number);
 }
 
-let randomColor = Math.floor(Math.random() * 255);
+function randomColor()
+{
+    return Math.floor(Math.random() * 255);
+}
+
 console.log(randomColor);
 
 function draw()
@@ -27,9 +31,9 @@ function draw()
         let randomRed = randomColor();
         let randomGreen = randomColor();
         let randomBlue = randomColor();
-        console.log(randomColor);
+    
 
-        ctx.fillStyle = `rgba(${randomColor}, 0, 0, 0.5)`;
+        ctx.fillStyle = `rgba(${randomRed}, ${randomGreen}, ${randomBlue}, 0.5)`;
         ctx.arc(
             random(canvas.width),
             random(canvas.height),
