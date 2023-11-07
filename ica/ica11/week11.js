@@ -15,13 +15,21 @@ function random(number)
     return Math.floor(Math.random() * number);
 }
 
+let randomColor = Math.floor(Math.random() * 255);
+console.log(randomColor);
+
 function draw()
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < 100; i++)
     {
         ctx.beginPath();
-        ctx.fillStyle = "rgba(255,0,0,0.5)";
+        let randomRed = randomColor();
+        let randomGreen = randomColor();
+        let randomBlue = randomColor();
+        console.log(randomColor);
+
+        ctx.fillStyle = `rgba(${randomColor}, 0, 0, 0.5)`;
         ctx.arc(
             random(canvas.width),
             random(canvas.height),
