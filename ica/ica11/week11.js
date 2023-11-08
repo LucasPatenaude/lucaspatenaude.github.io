@@ -1,6 +1,7 @@
 console.log("Hello");
 
 const btn = document.querySelector("button");
+const numberCircles = document.getElementById('textbox'); // Get element with ID 'customname'
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d")
 
@@ -25,15 +26,18 @@ console.log(randomColor);
 function draw()
 {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let i = 0; i < 100; i++)
+    const numberOfCircles = parseInt(numberCircles.value); // Get the value from the input field
+    for (let i = 0; i < numberOfCircles; i++)
     {
         ctx.beginPath();
+
+        // Generate random values for each RGB value
         let randomRed = randomColor();
         let randomGreen = randomColor();
         let randomBlue = randomColor();
-    
+        let randomDecimal = Math.random();
 
-        ctx.fillStyle = `rgba(${randomRed}, ${randomGreen}, ${randomBlue}, 0.5)`;
+        ctx.fillStyle = `rgba(${randomRed}, ${randomGreen}, ${randomBlue}, ${randomDecimal})`;
         ctx.arc(
             random(canvas.width),
             random(canvas.height),
