@@ -1,51 +1,73 @@
 h1 {
-    font-family: helvetica, arial, sans-serif;
-    text-align: center;
-  }
-  
-  body {
-    width: 640px;
-    margin: 0 auto;
-  }
-  
-  .full-img {
-    position: relative;
-    display: block;
-    max-width: 100%;
-  }
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
 
-  img {
-    max-width: 100%;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 640px;
-    height: 480px;
-    background-color: rgba(0,0,0,0);
-  }
-  
-  button {
-    border: 0;
-    background: rgba(150,150,150,50%);
-    text-shadow: 1px 1px 1px white;
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-image: url('../images/ice.jpg');
+  background-size: contain;
+}
 
-    border: 1px solid #999;
-    border-radius: 3px;
+.full-img {
+  position: relative;
+  display: block;
+}
 
-    position: absolute;
-    cursor: pointer;
-    top: 10px;
-    left: 10px;
-  }
-  
-  
-  .thumb-bar img {
-    display: block;
-    width: 20%;
-    float: left;
-    cursor: pointer;
-    max-height: 80px;
-  }
+.displayed-img {
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  border: 3px solid #999;
+  border-radius: 8px;
+  border-color: white;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: absolute;
+  top: 4px; /* Move down by 1px */
+  left: 4px; /* Move right by 1px */
+  width: 50%;
+  height: 480px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+}
+
+
+button {
+  border: 0;
+  background: white;
+  text-shadow: 1px 1px 1px white;
+  padding: 6px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  left: 15px;
+}
+
+.thumb-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.thumb-bar img {
+  display: block;
+  margin: 2px;
+  border: 3px solid #999;
+  border-radius: 8px;
+  border-color: white;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  width: 19%;
+  float: left;
+  cursor: pointer;
+  max-height: 100px;
+}

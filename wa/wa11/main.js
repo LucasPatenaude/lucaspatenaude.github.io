@@ -16,6 +16,9 @@ const altText = {
     // Add more images and their corresponding alt text as needed
 };
 
+overlay.style.width = displayedImage.width + 'px';
+overlay.style.height = displayedImage.height + 'px';
+
 /* Looping through images */
 
 pictures.forEach((filename, index) => {
@@ -28,6 +31,10 @@ pictures.forEach((filename, index) => {
     imgElement.addEventListener('click', () => {
         displayedImage.src = imgElement.src;
         displayedImage.alt = imgElement.alt;
+
+        // Update the overlay size to match the displayed image
+        overlay.style.width = displayedImage.width + 'px';
+        overlay.style.height = displayedImage.height + 'px';
     });
 
     thumbBar.appendChild(imgElement);
