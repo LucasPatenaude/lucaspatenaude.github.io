@@ -71,3 +71,8 @@ button {
   cursor: pointer;
   max-height: 100px;
 }
+
+@media screen and (max-width: 750px) {
+  body {
+    width: 90%;
+  }
