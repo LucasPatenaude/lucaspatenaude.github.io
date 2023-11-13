@@ -11,8 +11,11 @@ h1 {
   .full-img {
     position: relative;
     display: block;
-    width: 640px;
-    height: 480px;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
   }
   
   .overlay {
@@ -26,18 +29,23 @@ h1 {
   
   button {
     border: 0;
-    background: rgba(150,150,150,0.6);
+    background: rgba(150,150,150,50%);
     text-shadow: 1px 1px 1px white;
+
     border: 1px solid #999;
+    border-radius: 3px;
+
     position: absolute;
     cursor: pointer;
-    top: 2px;
-    left: 2px;
+    top: 10px;
+    left: 10px;
   }
+  
   
   .thumb-bar img {
     display: block;
     width: 20%;
     float: left;
     cursor: pointer;
+    max-height: 80px;
   }
