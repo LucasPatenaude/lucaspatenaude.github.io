@@ -1,11 +1,16 @@
-const QuoteButton = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-const answerButton = document.querySelector('#js-tweet').addEventListener('click', getAnswer);
+const questionButton = document.querySelector('#js-new-quote');
+questionButton.addEventListener('click', getQuote);
 
-let answer = "";
+const answerButton = document.querySelector('#js-tweet');
+answerButton.addEventListener('click', displayAnswer);
 
+const questionText = document.querySelector('#js-quote-text');
+let answerText = document.querySelector('#js-answer-text');
+
+let answer = '';
 
 // Variable to hold API endpoint
-const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasQuote';
+const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
 
 async function getQuote() // <-- Make this async to run fetch() API
 {
@@ -18,13 +23,11 @@ async function getQuote() // <-- Make this async to run fetch() API
         {
             throw Error(response.statusText);
         }
-
-        const json = await response.json(); //Get reponse form JSON
-
-        // onsole.log(json['Quote']); // Output JSON to console
-        displayQuote(json['Quote']);
-        answerText
+        const json = await response.json();
+        
+        displayQuote(json['question']);
         answer = json['answer'];
+        answerText.textContent = '';
 
     }
     // Run if error occurs --> Output error message to user
@@ -35,16 +38,13 @@ async function getQuote() // <-- Make this async to run fetch() API
     }
 }
 
-
-function displayQuote(Quote)
+function displayQuote(question)
 {
-    const QuoteText = document.querySelector('#js-quote-text');
-    QuoteText.textContent = Quote;
+    questionText.textContent = question;
 }
 
-function displayAnswer(answer)
+function displayAnswer()
 {
-    const answerText = document.querySelector('#js-answer-text');
     answerText.textContent = answer;
 }
 
