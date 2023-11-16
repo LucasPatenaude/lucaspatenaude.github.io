@@ -2,9 +2,11 @@ const quoteButton = document.querySelector('#js-new-quote');
 quoteButton.addEventListener('click', getFact);
 
 const catFactText = document.querySelector('#js-quote-text');
+const catPicture = document.querySelector('#js-cat-picture'); // Assuming you have an img element with this ID
 
-// Variable to hold API endpoint
+// Variable to hold API endpoints
 const catFactAPI = 'https://cat-fact.herokuapp.com';
+const catPictureAPI = "http://placekitten.com/";
 
 async function getFact() 
 {
@@ -13,11 +15,15 @@ async function getFact()
         // Fetch a random cat fact from the Cat Facts API
         const catFactsResponse = await fetch(`${catFactAPI}/facts`);
         const catFactsData = await catFactsResponse.json();
-        
-        // Display the question and cat fact
-        displayCatFact(catFactsData);
-    }
 
+        // Fetch a random cat picture from the PlaceKitten API
+        const catPictureSrc = getCatPictureSrc();
+        
+        // Display the cat fact and picture
+        displayCatFact(catFactsData);
+        displayCatPicture(catPictureSrc);
+    } 
+    
     catch (error) 
     {
         console.error('Error fetching data:', error);
@@ -32,15 +38,17 @@ function displayCatFact(catFactsData)
     const catFact = catFactsData[randomIndex].text;
 
     catFactText.textContent = catFact;
-   
-    // Display the cat fact
-    console.log(catFact);
-    // You can update your UI to display the cat fact as needed
 }
 
-/*
-function displayQuote(quote)
+function displayCatPicture(src) 
 {
-    questionText.textContent = quote;
-} 
-*/
+    catPicture.src = src;
+}
+
+function getCatPictureSrc() 
+{
+    // Generate a random size for the cat picture (replace this logic as needed)
+    const width = 450;
+    const height = Math.floor(Math.random() * 500) + 100;
+    return `${catPictureAPI}${width}/${height}`;
+}
