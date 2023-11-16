@@ -1,7 +1,7 @@
-const quoteButton = document.querySelector('#js-new-quote');
+const quoteButton = document.querySelector('#js-new-fact');
 quoteButton.addEventListener('click', getFact);
 
-const catFactText = document.querySelector('#js-quote-text');
+const catFactText = document.querySelector('#js-fact-text');
 const catPicture = document.querySelector('#js-cat-picture'); // Assuming you have an img element with this ID
 
 // Variable to hold API endpoints
