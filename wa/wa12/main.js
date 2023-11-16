@@ -49,6 +49,6 @@ function getCatPictureSrc()
 {
     // Generate a random size for the cat picture (replace this logic as needed)
     const width = 450;
-    const height = Math.floor(Math.random() * 500) + 100;
+    const height = Math.floor(Math.random() * 100) + 500;
     return `${catPictureAPI}${width}/${height}`;
 }

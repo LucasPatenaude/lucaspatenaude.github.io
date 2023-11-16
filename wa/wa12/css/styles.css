@@ -5,6 +5,7 @@ body {
 
 .browser-frame {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -17,11 +18,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: auto;
+    max-height: 600px;
     margin: 0 auto; /* Center the app horizontally using auto margin */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow for styling */
     border: 1px solid black;
     border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+p {
+    padding: 20px;
 }
 
 header {
@@ -53,8 +59,7 @@ header {
 
 .cat-picture {
     max-width: 100%;
-    height: auto;
-    margin-top: 20px; /* Add some top margin if needed */
+    height: 70%; /* Add some top margin if needed */
     border-radius: 8px;
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
