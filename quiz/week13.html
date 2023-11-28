@@ -31,7 +31,7 @@
 
     let para1 = document.createElement('p');
     let para2 = document.createElement('p');
-    let motherOutput = 'The mother cats are called ';
+    let motherInfo = 'The mother cats are called ';
     let kittenInfo;
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
 
@@ -52,7 +52,7 @@
         // Loop through the cats
         cats.forEach(cat => 
         {
-            motherOutput += cat.name;
+            motherInfo += cat.name;
 
             // Check if there are kittens
             if (cat.kittens) 
@@ -73,32 +73,32 @@
             // Add a comma and space if there are more mother cats
             if (cats.length > 1 && cat !== cats[cats.length - 1]) 
             {
-                motherOutput += ', ';
+                motherInfo += ', ';
             }
         });
 
         // Add "and" before the last mother cat and a full stop after it
         if (cats.length > 1) 
         {
-            const lastCommaIndex = motherOutput.lastIndexOf(',');
-            motherOutput =
-                motherOutput.substring(0, lastCommaIndex) + 
+            const lastCommaIndex = motherInfo.lastIndexOf(',');
+            motherInfo =
+                motherInfo.substring(0, lastCommaIndex) + 
                 ' and' +
-                motherOutput.substring(lastCommaIndex + 1) +
+                motherInfo.substring(lastCommaIndex + 1) +
                 '.';
         } 
         else 
         {
-            motherOutput += '.';
+            motherInfo += '.';
         }
 
         // Create the kittenInfo string
-        kittenOutput = `Total kittens: ${total}, Male: ${male}, Female: ${total - male}`;
+        kittenInfo = `Total kittens: ${total}, Male: ${male}, Female: ${total - male}`;
 
         // Don't edit the code below here!
 
-        para1.textContent = motherOutput;
-        para2.textContent = kittenOutput;
+        para1.textContent = motherInfo;
+        para2.textContent = kittenInfo;
     }
 
     section.appendChild(para1);
