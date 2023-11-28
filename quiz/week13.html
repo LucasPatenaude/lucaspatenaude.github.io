@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherOutput = 'The mother cats are called ';
+    let kittenInfo;
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+
+    function displayCatInfo(catString) 
+    {
+      let total = 0;
+      let male = 0;
+
+      // Add your code here
+
+        // Parse the JSON data
+        const cats = JSON.parse(catString);
+
+        // Loop through the cats
+        cats.forEach(cat => 
+        {
+            motherOutput += cat.name;
+
+            // Check if there are kittens
+            if (cat.kittens) 
+            {
+                // Loop through the kittens
+                cat.kittens.forEach(kitten => 
+                {
+                    total++;
+
+                    // Check the gender of the kitten
+                    if (kitten.gender === 'm') 
+                    {
+                        male++;
+                    }
+                });
+            }
+
+            // Add a comma and space if there are more mother cats
+            if (cats.length > 1 && cat !== cats[cats.length - 1]) 
+            {
+                motherOutput += ', ';
+            }
+        });
+
+        // Add "and" before the last mother cat and a full stop after it
+        if (cats.length > 1) 
+        {
+            const lastCommaIndex = motherOutput.lastIndexOf(',');
+            motherOutput =
+                motherOutput.substring(0, lastCommaIndex) + 
+                ' and' +
+                motherOutput.substring(lastCommaIndex + 1) +
+                '.';
+        } 
+        else 
+        {
+            motherOutput += '.';
+        }
+
+        // Create the kittenInfo string
+        kittenOutput = `Total kittens: ${total}, Male: ${male}, Female: ${total - male}`;
+
+        // Don't edit the code below here!
+
+        para1.textContent = motherOutput;
+        para2.textContent = kittenOutput;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
+
+  
