@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column; /* Make sure the layout is vertical */
     height: 100vh;
-    width: 95%;
     margin: 0;
   }
   
@@ -28,11 +27,6 @@ body {
   
   .numbers {
     font-size: 2em;
-    margin: 1em 1em;
-    padding: 20px;
-    border: 1px solid lightgray;
-    border-radius: 8px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* x-offset y-offset blur-radius color */
-}
-
+    margin: 0 1em;
+  }
   
