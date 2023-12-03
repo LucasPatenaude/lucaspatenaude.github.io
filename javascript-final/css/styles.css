@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 {
+
+  }
+
+  .numbers {
+    font-size: 2em;
+    margin: 0 1em;
+  }
