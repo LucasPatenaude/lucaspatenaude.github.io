@@ -23,10 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Animation for the red rectangle (moves up and down)
     var redMovement = 2;
-    function animateRedRectangle() {
+    function animateRedRectangle() 
+    {
         var topPosition = redRectangle.offsetTop;
 
-        if (topPosition <= 0 || topPosition >= content.clientHeight - redRectangle.clientHeight) {
+        if (topPosition <= 0 || topPosition >= content.clientHeight - redRectangle.clientHeight) 
+        {
             redMovement = -redMovement;
         }
 
@@ -36,7 +38,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Animation for the blue rectangle (moves side to side)
     var blueSpeed = 2;
-    function animateBlueRectangle() {
+    function animateBlueRectangle() 
+    {
         var leftPosition = blueRectangle.offsetLeft;
 
         if (leftPosition <= 0 || leftPosition >= content.clientWidth - blueRectangle.clientWidth) {
