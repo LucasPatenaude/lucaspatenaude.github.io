@@ -41,6 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
         else
         {
             phoneNumberInput.value = ''; // Clear the text field
+            
+
+            // Flash the screen red
+            document.body.style.backgroundColor = 'red';
+
+            // Clear the text field after a brief delay
+            setTimeout(function () {
+                phoneNumberInput.value = ''; // Clear the text field
+                // Reset the background color after the delay
+                document.body.style.backgroundColor = '';
+            }, 500); // Adjust the delay (in milliseconds) as needed
         }
     });
 
