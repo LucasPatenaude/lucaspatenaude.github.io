@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create a red rectangle that moves up and down and spans the whole width
     var redRectangle = document.createElement("div");
     redRectangle.style.width = "100%";  // Set the width to 100%
-    redRectangle.style.height = "50px";
+    redRectangle.style.height = "150px";
     redRectangle.style.backgroundColor = "red";
     redRectangle.style.position = "absolute";
     redRectangle.style.top = "50px"; // Set an initial top position
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create a blue rectangle that moves side to side
     var blueRectangle = document.createElement("div");
-    blueRectangle.style.width = "50px";
+    blueRectangle.style.width = "150px";
     blueRectangle.style.height = "100%";
     blueRectangle.style.backgroundColor = "blue";
     blueRectangle.style.position = "absolute";
