@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
     // Get the overlay element reference
     var overlayElement = document.getElementById('overlay');
+    overlayElement.classList.add('output-message');
 
     // Add a click event listener to the submit button
     submitButton.addEventListener('click', function (event) 
@@ -38,8 +39,12 @@ document.addEventListener('DOMContentLoaded', function ()
             window.pauseTimer();
         
             // Display "Phone Number Submitted" in the center of the screen
-            overlayElement.textContent = 'Phone Number Submitted';
+            const submittedMessage = `Phone Number: ${phoneNumberInput.value} Submitted<br>Thanks for Signing-Up for the Voluntary NSA Watchlist Program!`;
+            overlayElement.innerHTML = submittedMessage;
             overlayElement.style.display = 'block';
+
+
+
         }
         
         // Phone number is too long or short

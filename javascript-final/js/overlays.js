@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create a red rectangle that moves up and down and spans the whole width
     var redRectangle = document.createElement("div");
     redRectangle.style.width = "100%";  // Set the width to 100%
-    redRectangle.style.height = "150px";
+    redRectangle.style.height = "175px";
     redRectangle.style.backgroundColor = "red";
     redRectangle.style.position = "absolute";
     redRectangle.style.top = "50px"; // Set an initial top position
@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create a blue rectangle that moves side to side
     var blueRectangle = document.createElement("div");
-    blueRectangle.style.width = "150px";
+    blueRectangle.style.width = "250px";
     blueRectangle.style.height = "100%";
     blueRectangle.style.backgroundColor = "blue";
     blueRectangle.style.position = "absolute";
     content.appendChild(blueRectangle);
 
     // Animation for the red rectangle (moves up and down)
-    var redMovement = 2;
+    var redMovement = 4;
     function animateRedRectangle() 
     {
         var topPosition = redRectangle.offsetTop;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Animation for the blue rectangle (moves side to side)
-    var blueSpeed = 2;
+    var blueSpeed = 7;
     function animateBlueRectangle() 
     {
         var leftPosition = blueRectangle.offsetLeft;

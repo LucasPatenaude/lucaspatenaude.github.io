@@ -32,7 +32,7 @@ function handleNumberClick(number)
 function generateRandomInterval() 
 {
   // Generate a random value between 1 and 10, then append "000" to it
-  var intervalValue = Math.floor(Math.random() * 7) + 1;
+  var intervalValue = Math.floor(Math.random() * 5) + 1;
   intervalValue = intervalValue * 1000; // Append "000"
 
   // Call displayNumbers with the new interval value
