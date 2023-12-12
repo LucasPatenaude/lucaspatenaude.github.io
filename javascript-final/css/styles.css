@@ -6,16 +6,18 @@ body {
 }
 
 nav {
-  height: 15%;
+  height: 10%;
   display: flex;
   align-items: center;
   background-color: #f0f0f0;
+  z-index: 10;
 }
 
 h1 {
-  flex: 1; /* Allow h1 to take up remaining space */
-  text-align: center; /* Center the text within h1 */
-  margin-bottom: 10px;
+  flex: 1; /* Take up remaining space */
+  width: 100%;
+  position: absolute;
+  text-align: center;
 }
 
 #timer-style {
@@ -23,22 +25,31 @@ h1 {
   border: 8px solid black;
   border-radius: 10px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 11;
 }
 
 #timer {
   padding: 10px 30px;
   background-color: white;
+  z-index: 11;
 }
 
 #phoneNumberInput {
-  margin-left: auto; /* Center the input to the right */
-  margin-right: 15px; /* Adjust margin as needed */
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 50px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9;
 }
 
 content {
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   width: 85%;
   max-height: fit-content;
