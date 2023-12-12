@@ -46,18 +46,22 @@ button {
   margin-left: auto;
   margin-right: 30px;
   padding: 7px 50px;
+  border-radius: 4px;
+  font-weight: bold;
   z-index: 11;
 }
 
 button:hover {
-  background-color: #4CAF50; /* Change the background color on hover */
-  color: green; /* Change the text color on hover */
+  background-color: #b6b7b6; /* Change the background color on hover */
+  border-color: #b6b7b6;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #phoneNumberInput {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   padding: 8px 80px;
   border: 1px solid lightgray;
   border-radius: 4px;
