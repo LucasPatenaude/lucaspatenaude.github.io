@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const phoneNumberInput = document.getElementById('phoneNumberInput');
     const numbersArray = document.getElementById('numbers_array');
 
+    // Get the overlay element reference
+    var overlayElement = document.getElementById('overlay');
+
     // Add a click event listener to the submit button
     submitButton.addEventListener('click', function (event) {
         // Prevent the default form submission behavior
@@ -15,23 +18,29 @@ document.addEventListener('DOMContentLoaded', function () {
         const phoneNumberLength = phoneNumberInput.value.length;
 
         // Check if passed in string is 10 characters
-        if (phoneNumberLength === 14) 
-        {
-            
-
+        if (phoneNumberLength === 14) {
             // Change the background color to green
             document.body.style.backgroundColor = 'green';
             // Clear any other content (e.g., numbers array)
             numbersArray.innerHTML = '';
+            // Hide the input textbox
+            phoneNumberInput.style.display = 'none';
             // Hide the overlays
             hideOverlays();
             // Hide Number Array
             displayNumbersFlag = false;
+            // Pause Timer
+            window.pauseTimer();
+        
+            // Display "Phone Number Submitted" in the center of the screen
+            overlayElement.textContent = 'Phone Number Submitted';
+            overlayElement.style.display = 'block';
         }
+        
         // Phone number is too long or short
         else
         {
-        phoneNumberInput.value = ''; // Clear the text field
+            phoneNumberInput.value = ''; // Clear the text field
         }
     });
 

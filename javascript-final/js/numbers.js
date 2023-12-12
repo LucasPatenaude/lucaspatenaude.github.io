@@ -5,27 +5,32 @@ var inputElement = document.getElementById('phoneNumberInput');
 var displayNumbersFlag = true;
 
 // Function to handle click events for numbers
-function handleNumberClick(number) {
+function handleNumberClick(number) 
+{
   // Append the clicked number to the input element
   inputElement.value += number;
 
   // Add parentheses around the first three numbers
-  if (inputElement.value.length === 3) {
+  if (inputElement.value.length === 3) 
+  {
     inputElement.value = '(' + inputElement.value + ')';
   }
 
-  if (inputElement.value.length === 5) {
+  if (inputElement.value.length === 5) 
+  {
     inputElement.value += ' ';
   }
 
   // Add a dash between the 6th and 7th numbers
-  if (inputElement.value.length === 9) {
+  if (inputElement.value.length === 9) 
+  {
     inputElement.value += '-';
   }
 }
 
 // Function to generate a random interval value between 1 and 10 and call displayNumbers
-function generateRandomInterval() {
+function generateRandomInterval() 
+{
   // Generate a random value between 1 and 10, then append "000" to it
   var intervalValue = Math.floor(Math.random() * 7) + 1;
   intervalValue = intervalValue * 1000; // Append "000"
@@ -38,9 +43,11 @@ function generateRandomInterval() {
 }
 
 // Function to display random numbers on the page with random positions
-function displayNumbers() {
+function displayNumbers() 
+{
   // Check the displayNumbersFlag before generating numbers
-  if (!displayNumbersFlag) {
+  if (!displayNumbersFlag) 
+  {
     return;
   }
 
@@ -54,42 +61,45 @@ function displayNumbers() {
   outputElement.innerHTML = '';
 
   // Generate unique random numbers
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 10; i++) 
+  {
     let randomNumber;
 
     // Generate a random number between 0 and 9
-    do {
+    do 
+    {
       randomNumber = Math.floor(Math.random() * 10);
     } while (numbers.includes(randomNumber)); // Check if the number is already in the array
 
     // Add the unique random number to the array
     numbers.push(randomNumber);
 
-    // Create a new <span> element for each number
-    var span = document.createElement('span');
+    // Create a new <arrayOfNumbers> element for each number
+    var arrayOfNumbers = document.createElement('arrayOfNumbers');
 
-    // Set the text content of the <span> to the current number
-    span.textContent = randomNumber;
+    // Set the text content of the <arrayOfNumbers> to the current number
+    arrayOfNumbers.textContent = randomNumber;
 
-    // Add the "numbers" class to the <span> element
-    span.classList.add('numbers');
+    // Add the "numbers" class to the <arrayOfNumbers> element
+    arrayOfNumbers.classList.add('numbers');
 
-    // Set random position for the <span> element within the visible area of the content container
+    // Set random position for the <arrayOfNumbers> element within the visible area of the content container
     var contentContainer = document.getElementById('content');
-    var randomX = Math.random() * (contentContainer.clientWidth); // Adjust as per your span element width
-    var randomY = Math.random() * (contentContainer.clientHeight); // Adjust as per your span element height
-    span.style.position = 'absolute';
-    span.style.left = randomX + 'px';
-    span.style.top = randomY + 'px';
+    var randomX = Math.random() * (contentContainer.clientWidth); // Adjust as per your arrayOfNumbers element width
+    var randomY = Math.random() * (contentContainer.clientHeight); // Adjust as per your arrayOfNumbers element height
+    arrayOfNumbers.style.position = 'absolute';
+    arrayOfNumbers.style.left = randomX + 'px';
+    arrayOfNumbers.style.top = randomY + 'px';
 
     // Add a click event listener to each number
-    span.addEventListener('click', function () {
+    arrayOfNumbers.addEventListener('click', function () 
+    {
       // Call the function to handle the click event
       handleNumberClick(randomNumber);
     });
 
-    // Append the <span> to the output element
-    outputElement.appendChild(span);
+    // Append the <arrayOfNumbers> to the output element
+    outputElement.appendChild(arrayOfNumbers);
   }
 }
 
