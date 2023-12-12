@@ -43,9 +43,26 @@ function updateTimer()
         else 
         {
           // Timer has reached zero
-          timerElement.innerText = '00:00';
-          inputElement.value = ''; // Clear the text box
-          flashRed(); // Flash the screen red
+          timerElement.innerText = '0:00';
+          
+          phoneNumberInput.value = ''; // Clear the text field
+
+          // Remove background image
+          document.body.style.backgroundImage = 'none';
+      
+          // Flash the screen red
+          document.body.style.backgroundColor = 'red';
+
+          // Clear the text field after a brief delay
+          setTimeout(function () 
+          {
+              phoneNumberInput.value = ''; // Clear the text field
+              // Reset the background color after the delay
+              document.body.style.backgroundColor = '';
+
+              // Reset background image
+              document.body.style.backgroundImage = 'url("css/Images/Ice\ Background.jpg")';
+          }, 1000); // Adjust the delay (in milliseconds) as needed
           seconds = 30; // Restart the timer to 30
         }
       }

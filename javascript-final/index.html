@@ -3,13 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Horizontal Numbers</title>
+        <title>Phone Number Enterer</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script defer src="js/numbers.js"></script>
-        <script defer src="js/timer.js"></script>
-        <script defer src="js/overlays.js"></script>
-        <script defer src="js/submit.js"></script>
-        <script defer src="js/refresh.js"></script>
     </head>
 
     <body>
@@ -17,15 +12,19 @@
             <div id="timer-style">
               <div id="timer"></div>
             </div>
-            <h1>Enter Your Phone Number</h1>
+            <h1>Phone Number Entering Game</h1>
             <button type="submit">Submit</button>
         </nav>
         
         <content id ="content">
-            <input type="text" id="phoneNumberInput" placeholder="Type your phone number...">
+            <input type="text" id="phoneNumberInput" placeholder="Enter in a 10-digit phone number..." readonly>
             <div id="numbers_array"></div>
         </content>
-
         <div id="overlay"></div>
     </body>
+    <script defer src="js/numbers.js"></script>
+    <script defer src="js/timer.js"></script>
+    <script defer src="js/overlays.js"></script>
+    <script defer src="js/submit.js"></script>
+    <script defer src="js/refresh.js"></script>
 </html> 

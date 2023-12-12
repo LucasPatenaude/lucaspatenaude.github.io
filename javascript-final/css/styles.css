@@ -3,13 +3,15 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  background-image: url('Images/Ice\ Background.jpg');
 }
 
 nav {
   height: 7%;
   display: flex;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: rgb(151, 31, 31);
+  border-bottom: 1px solid black;
   z-index: 10;
 }
 
@@ -18,25 +20,32 @@ h1 {
   width: 100%;
   position: absolute;
   text-align: center;
+  font-family: 'StruckBase';
+  color: white;
+  font-size: 150%;
 }
 
 #timer-style {
   margin-left: 30px;
-  border: 8px solid black;
-  border-radius: 10px;
+  border: 5px solid black;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'CursedTimerUlil-Aznm';
   z-index: 11;
 }
 
 #timer {
-  padding: 7px 20px;
-  background-color: white;
-  z-index: 11;
+  padding: 3px 10px;
+  background-image: url('Images/Black\ Dot\ Grid.jpg');
+  font-family: 'CursedTimerUlil';
+  color: rgb(192, 125, 2);
+  font-size: 30px;
+  z-index: 10;
 }
 
 button {
   margin-left: auto;
   margin-right: 30px;
+  padding: 7px 50px;
   z-index: 11;
 }
 
@@ -49,7 +58,7 @@ button:hover {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  padding: 8px 50px;
+  padding: 8px 80px;
   border: 1px solid lightgray;
   border-radius: 4px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
@@ -71,12 +80,20 @@ content {
 .numbers {
   font-size: 2em;
   margin: 1em 1em;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
+  color: white;
+  background-color: black;
   border: 1px solid lightgray;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   position: absolute;
 }
+
 
 /* Add this to your CSS file */
 #overlay {
@@ -89,3 +106,23 @@ content {
   color: white;
 }
 
+/*
+    FONT FACES
+*/
+
+@font-face {
+  font-family: 'CursedTimerUlil';
+  src: url('Fonts/CursedTimerUlil.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'StruckBase';
+  src: url('Fonts/StruckBase.otf') format('truetype');
+}
+
+@media screen and (max-width: 750px) 
+{
+  h1 {
+    display: none;
+  }
+}
