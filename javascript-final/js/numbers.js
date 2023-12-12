@@ -1,16 +1,31 @@
 // Get the reference to the input element
 var inputElement = document.getElementById('phoneNumberInput');
 
+// Flag to control whether to display numbers or not
+var displayNumbersFlag = true;
+
 // Function to handle click events for numbers
-function handleNumberClick(number) 
-{
+function handleNumberClick(number) {
   // Append the clicked number to the input element
   inputElement.value += number;
+
+  // Add parentheses around the first three numbers
+  if (inputElement.value.length === 3) {
+    inputElement.value = '(' + inputElement.value + ')';
+  }
+
+  if (inputElement.value.length === 5) {
+    inputElement.value += ' ';
+  }
+
+  // Add a dash between the 6th and 7th numbers
+  if (inputElement.value.length === 9) {
+    inputElement.value += '-';
+  }
 }
 
 // Function to generate a random interval value between 1 and 10 and call displayNumbers
-function generateRandomInterval() 
-{
+function generateRandomInterval() {
   // Generate a random value between 1 and 10, then append "000" to it
   var intervalValue = Math.floor(Math.random() * 7) + 1;
   intervalValue = intervalValue * 1000; // Append "000"
@@ -23,8 +38,12 @@ function generateRandomInterval()
 }
 
 // Function to display random numbers on the page with random positions
-function displayNumbers() 
-{
+function displayNumbers() {
+  // Check the displayNumbersFlag before generating numbers
+  if (!displayNumbersFlag) {
+    return;
+  }
+
   // Your array of numbers
   var numbers = [];
 
@@ -35,13 +54,11 @@ function displayNumbers()
   outputElement.innerHTML = '';
 
   // Generate unique random numbers
-  for (var i = 0; i < 10; i++) 
-  {
+  for (var i = 0; i < 10; i++) {
     let randomNumber;
 
     // Generate a random number between 0 and 9
-    do 
-    {
+    do {
       randomNumber = Math.floor(Math.random() * 10);
     } while (numbers.includes(randomNumber)); // Check if the number is already in the array
 
@@ -66,8 +83,7 @@ function displayNumbers()
     span.style.top = randomY + 'px';
 
     // Add a click event listener to each number
-    span.addEventListener('click', function () 
-    {
+    span.addEventListener('click', function () {
       // Call the function to handle the click event
       handleNumberClick(randomNumber);
     });

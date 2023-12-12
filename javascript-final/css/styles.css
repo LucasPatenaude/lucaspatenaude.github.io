@@ -29,7 +29,7 @@ h1 {
 }
 
 #timer {
-  padding: 10px 30px;
+  padding: 7px 20px;
   background-color: white;
   z-index: 11;
 }
@@ -37,6 +37,12 @@ h1 {
 button {
   margin-left: auto;
   margin-right: 30px;
+  z-index: 11;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Change the background color on hover */
+  color: green; /* Change the text color on hover */
 }
 
 #phoneNumberInput {
