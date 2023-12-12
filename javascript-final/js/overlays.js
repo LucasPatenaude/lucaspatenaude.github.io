@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the content area
     var content = document.getElementById("content");
 
-
     content.style.width = "100%";
 
     // Create a red rectangle that moves up and down and spans the whole width
@@ -11,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     redRectangle.style.height = "50px";
     redRectangle.style.backgroundColor = "red";
     redRectangle.style.position = "absolute";
+    redRectangle.style.top = "50px"; // Set an initial top position
     content.appendChild(redRectangle);
 
     // Create a blue rectangle that moves side to side
@@ -22,28 +22,24 @@ document.addEventListener("DOMContentLoaded", function() {
     content.appendChild(blueRectangle);
 
     // Animation for the red rectangle (moves up and down)
-    var redSpeed = 2; // Adjust the speed as needed
-    function animateRedRectangle() 
-    {
+    var redMovement = 2;
+    function animateRedRectangle() {
         var topPosition = redRectangle.offsetTop;
 
-        if (topPosition <= 0 || topPosition >= content.clientHeight - redRectangle.clientHeight) 
-        {
-            redSpeed = -redSpeed;
+        if (topPosition <= 0 || topPosition >= content.clientHeight - redRectangle.clientHeight) {
+            redMovement = -redMovement;
         }
 
-        redRectangle.style.top = topPosition + redSpeed + "px";
+        redRectangle.style.top = topPosition + redMovement + "px";
         requestAnimationFrame(animateRedRectangle);
     }
 
     // Animation for the blue rectangle (moves side to side)
-    var blueSpeed = 2; // Adjust the speed as needed
-    function animateBlueRectangle() 
-    {
+    var blueSpeed = 2;
+    function animateBlueRectangle() {
         var leftPosition = blueRectangle.offsetLeft;
 
-        if (leftPosition <= 0 || leftPosition >= content.clientWidth - blueRectangle.clientWidth) 
-        {
+        if (leftPosition <= 0 || leftPosition >= content.clientWidth - blueRectangle.clientWidth) {
             blueSpeed = -blueSpeed;
         }
 
