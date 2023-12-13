@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Phone Number Enterer</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Enterer</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-    <body>
-        <nav>
-            <div id="timer-style">
-              <div id="timer"></div>
-            </div>
-            <h1>Phone Number Entering Game</h1>
-            <button type="submit">Submit</button>
-        </nav>
-        
-        <content id ="content">
-            <input type="text" id="phoneNumberInput" placeholder="10 Digits. No More. No Less" readonly>
-            <div id="numbers_array"></div>
-        </content>
-        <div id="overlay"></div>
-    </body>
+<body>
+    <nav>
+        <div id="timer-style">
+            <div id="timer"></div>
+        </div>
+        <h1>Phone Number Entering Game</h1>
+        <button type="submit">Submit</button>
+    </nav>
+    
+    <div id="content">
+        <input type="text" id="phoneNumberInput" placeholder="10 Digits. No More. No Less" readonly>
+        <div id="numbers_array"></div>
+    </div>
+    <div id="overlay"></div>
+    
     <script defer src="js/numbers.js"></script>
     <script defer src="js/timer.js"></script>
     <script defer src="js/overlays.js"></script>
     <script defer src="js/submit.js"></script>
     <script defer src="js/refresh.js"></script>
     <meta name="theme-color" content="rgb(151, 31, 31)"> <!-- Add Safari Coloring -->
-</html> 
+</body>
+</html>
