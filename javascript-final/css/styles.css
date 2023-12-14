@@ -45,20 +45,19 @@ h1 {
 
 button {
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 18px;
   padding: 7px 50px;
-  border-radius: 4px;
-  background-color: rgb(241, 239, 239);
-  border: 3px solid rgb(116, 17, 17);
+  border-radius: 5px;
+  background-color: rgb(151, 31, 31);
+  border: 2px solid #F8878D;
   font-weight: bold;
+  color: #F8878D;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 11;
 }
 
 button:hover {
-  background-color: #b6b7b6; /* Change the background color on hover */
-  border-color: #b6b7b6;
-  border: 3px solid rgb(116, 17, 17);
+  background-color: rgb(219, 81, 81); /* Change the background color on hover */
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
