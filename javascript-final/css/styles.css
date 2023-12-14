@@ -47,18 +47,18 @@ button {
   margin-left: auto;
   margin-right: 18px;
   padding: 7px 50px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgb(151, 31, 31);
-  border: 2px solid #F8878D;
+  border: 1.5px solid #F8878D;
   font-weight: bold;
   color: #F8878D;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  
   z-index: 11;
 }
 
 button:hover {
-  background-color: rgb(219, 81, 81); /* Change the background color on hover */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #a72b31; /* Change the background color on hover */
+  outline: 6px solid #a72b31; /* Add a gold/yellow outline on hover */
 }
 
 #phoneNumberInput {

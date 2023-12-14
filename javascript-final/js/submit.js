@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
                 // Reset background image
                 document.body.style.backgroundImage = 'url("css/Images/Ice\ Background.jpg")';
+
             }, 1000); // Adjust the delay (in milliseconds) as needed
         }
     });
