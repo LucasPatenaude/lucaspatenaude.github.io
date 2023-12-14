@@ -85,8 +85,8 @@ function displayNumbers()
 
     // Set random position for the <arrayOfNumbers> element within the visible area of the content container
     var contentContainer = document.getElementById('content');
-    var randomX = Math.random() * (contentContainer.clientWidth - 200); // Adjust as per your arrayOfNumbers element width
-    var randomY = Math.random() * (contentContainer.clientHeight - 200); // Adjust as per your arrayOfNumbers element height
+    var randomX = Math.random() * (contentContainer.clientWidth - 150); // Adjust as per your arrayOfNumbers element width
+    var randomY = Math.random() * (contentContainer.clientHeight - 150); // Adjust as per your arrayOfNumbers element height
     arrayOfNumbers.style.position = 'absolute';
     arrayOfNumbers.style.left = randomX + 'px';
     arrayOfNumbers.style.top = randomY + 'px';

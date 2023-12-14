@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Number Enterer</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Phone Number Enterer</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta name="theme-color" content="rgb(151, 31, 31)"> <!-- Add Safari Coloring -->
+    </head>
 
-<body>
-    <nav>
-        <div id="timer-style">
-            <div id="timer"></div>
+    <body>
+        <!----- Navigation Bar ----->
+        <nav>
+            <!-- Create Timer -->
+            <div id="timer-style"> 
+                <div id="timer"></div> 
+            </div>
+
+            <!-- Display Title of Page -->
+            <h1>Phone Number Entering Game</h1>
+
+            <!-- Create Submit Button -->
+            <button type="submit">Submit</button>
+        </nav>
+        
+        <!----- Webpage Content Area ----->
+        <div id="content">
+            <!-- Create Bar to Store Numbers -->
+            <input type="text" id="phoneNumberInput" placeholder="10 Digits. No More. No Less" readonly> 
+
+            <!-- Display Numbers Array -->
+            <div id="numbers_array"></div>
         </div>
-        <h1>Phone Number Entering Game</h1>
-        <button type="submit">Submit</button>
-    </nav>
-    
-    <div id="content">
-        <input type="text" id="phoneNumberInput" placeholder="10 Digits. No More. No Less" readonly>
-        <div id="numbers_array"></div>
-    </div>
-    <div id="overlay"></div>
-    
-    <script defer src="js/numbers.js"></script>
-    <script defer src="js/timer.js"></script>
-    <script defer src="js/overlays.js"></script>
-    <script defer src="js/submit.js"></script>
-    <script defer src="js/refresh.js"></script>
-    <meta name="theme-color" content="rgb(151, 31, 31)"> <!-- Add Safari Coloring -->
-</body>
+
+        <!----- Submission Screen ----->
+        <div id="overlay"></div>
+        
+        <script defer src="js/numbers.js"></script> <!-- Number Array Generation Code -->
+        <script defer src="js/timer.js"></script> <!-- Timer Countdown Code -->
+        <script defer src="js/overlays.js"></script> <!-- Moving Overlays Code -->
+        <script defer src="js/submit.js"></script> <!-- Submission Screen Pop-Up Code -->
+        <script defer src="js/refresh.js"></script> <!-- Reset Page when Refreshed Code -->
+    </body>
 </html>
